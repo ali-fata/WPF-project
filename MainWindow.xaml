@@ -1,0 +1,113 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="400">
+    <TabControl x:Name="myTabControl">
+        <TabItem Header="  1  ">
+
+            <StackPanel>
+
+
+                <TextBlock Text="Page 1" Margin="265,0,20,20" FontWeight="Bold"/>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Margin="20 10 10 0" Grid.Column="0" Content="Save"/>
+                    <Button Margin="20 10 10 0" Grid.Column="1" Content="Load"/>
+                    <Button Margin="20,10,20,0" Grid.Column="2" Content="R"/>
+                </Grid>
+                <Button Margin="20"  Content="New"/>
+
+                <TextBlock Text="Your Favorites" Margin="20 0 0 0" FontWeight="Bold"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0" Margin="20 0 0 0">
+                        <CheckBox Content="sports" Margin="0 10 0 0"/>
+                        <CheckBox Content="studying" Margin="0 0 0 0"/>
+                        <CheckBox Content="watching TV" Margin="0 0 0 0"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="1">
+                        <CheckBox Content="hang out" Margin="0 10 0 0"/>
+                        <CheckBox Content="listening to music" Margin="0 0 0 0"/>
+                        <CheckBox Content="shopping" Margin="0 0 0 0"/>
+                    </StackPanel>
+                    <StackPanel Grid.Column="2">
+                        <ComboBox Margin="0 0 20 0">
+                            <ComboBoxItem Content="none" IsSelected="True"/>
+                            <ComboBoxItem Content="Male"/>
+                            <ComboBoxItem Content="Female"/>
+                        </ComboBox>
+                    </StackPanel>
+                </Grid>
+                <TextBlock Text="extra explanations" Margin="20 20 20 0" FontWeight="Bold"/>
+                <TextBlock Text="(press Enter to add new lines)" Margin="20 0 0 10"/>
+                <TextBox Margin="20 0 20 0" Padding="10" AcceptsReturn="True" IsManipulationEnabled="True" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Disabled"/>
+                <Button Content="next page" Margin="120 50 120 0" Click="Button_Click"/>
+
+            </StackPanel>
+
+        </TabItem>
+
+        <TabItem Header="  2  " Name="tab2">
+            <StackPanel>
+                <TextBlock Text="Page 2" Margin="265,0,20,20" FontWeight="Bold"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="name  :" Margin="20 20 0 0" Grid.Column="0"/>
+                    <TextBox Margin="100,20,20,0" Grid.ColumnSpan="2"/>
+                </Grid>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="family  :" Margin="20 20 0 0" Grid.Column="0"/>
+                    <TextBox Margin="100,20,20,0" Grid.ColumnSpan="2"/>
+                </Grid>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="age   :" Margin="20 20 0 0" Grid.Column="0"/>
+                    <TextBox Margin="100,20,20,0" Grid.ColumnSpan="2"/>
+                </Grid>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="equations   :" Margin="20 20 0 0" Grid.Column="0"/>
+                    <TextBox Margin="100,20,20,0" Grid.ColumnSpan="2" AcceptsReturn="True"/>
+                </Grid>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30*" />
+                        <ColumnDefinition Width="349*" />
+                        <ColumnDefinition Width="30*" />
+                    </Grid.ColumnDefinitions>
+                    <Image Margin="12,12,16,71" Name="imgPhoto"
+                     Stretch="Fill" Grid.Column="1" />
+                    <Button Height="23" HorizontalAlignment="Left"
+                     Margin="15,0,0,35" Name="btnLoad" VerticalAlignment="Bottom"
+                     Width="105" Grid.Column="1" Click="btnLoad_Click">_Browse a picture</Button>
+                </Grid>
+            </StackPanel>
+        </TabItem>
+    </TabControl>
+</Window>
